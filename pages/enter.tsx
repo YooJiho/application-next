@@ -12,7 +12,7 @@ interface EnterForm {
 }
 
 const Enter: NextPage = () => {
-  const [enter, { loading, data, error }] = useMutation("/api/user/enter");
+  const [enter, { loading, data, error }] = useMutation("/api/users/enter");
   const [submitting, setSubmitting] = useState(false);
   const { register, watch, handleSubmit, reset } = useForm<EnterForm>();
   const [method, setMethod] = useState<"email" | "phone">("email");
